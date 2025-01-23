@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#Specify maximum number of files to be pushed
+
+max_files=15
+
+#Check files staged for pushing
+
+staged_files=$(git diff --cached --name only | wc -l)
+
+#Check if staged files exceeds the limit
+
+if [ "$staged_files" -gt "$max_files"]; then
+
+echo "The number of files you are attempting to push exceeds the limit ($max_files) files."
+
+exit 1
+
+fi
+
+#Proceed with the push if the number of files to be pushed doesn't exceed the limit
+
+exit 0
