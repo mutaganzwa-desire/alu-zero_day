@@ -2,7 +2,7 @@
 
 #Specify maximum number of files to be pushed
 
-max_files=15
+max_files="~"
 
 #Check files staged for pushing
 
